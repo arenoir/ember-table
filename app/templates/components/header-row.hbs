@@ -1,11 +1,9 @@
-<div style={{rowWidthSafeString}}>
-{{#each content as |item|}}
-	{{component item.headerCellViewClass
-	    content=item
-	    headerHeight=headerHeight
+{{#each columns as |column|}}
+	{{component column.headerCellTemplateName
+	    column=column
+	    height=height
   		columnMode=columnMode
   		columnsFillTable=columnsFillTable
   		toggleTableCollapse='toggleTableCollapse'
 	}}
 {{/each}}
-</div>

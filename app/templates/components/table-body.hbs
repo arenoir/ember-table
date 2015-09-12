@@ -1,0 +1,3 @@
+{{#ember-table-collection onScrollChange=(action "scrollChange") items=rows height=height width=width cell-layout=(fixed-grid-layout width rowHeight) as |row index| }}
+  {{table-row row=row index=index columns=columns}}
+{{/ember-table-collection}}

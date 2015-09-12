@@ -72,7 +72,7 @@
 
 /* Table Structures */
 
-.ember-table-tables-container {
+.ember-table {
   height: 100%;
   width: 100%;
   position: relative;
@@ -88,26 +88,23 @@
   .box-sizing();
   .user-select(none);
 
-  &.ember-table-content-selectable {
-      .user-select(text);
-  }
-
   * {
     text-rendering: optimizeLegibility;
   }
 }
 
-.ember-table-table-container {
-  // Height and Width defined dynamically through JS
-  // Let Antiscroll handle the overflow
+.table-header-container {
   overflow: hidden;
-  // deal with Linux Chrome v38 wrapping bug
-  // reset to normal in .ember-table-table-block
-  white-space: nowrap;
-  position: relative;
-  z-index: 3;
-  .box-sizing();
 }
+
+.table-header {
+  postion: relative
+}
+
+.table-body {
+  position: relative
+}
+
 
 .ember-table-table-fixed-wrapper,
 .ember-table-table-scrollable-wrapper {
@@ -349,29 +346,24 @@
     line-height: 1;
   }
 
-  .ember-table-content-container {
+
+  .ember-table-content {
+    padding: 5px;
+    line-height: 1.4;
+    bottom: 2px;
+    font-weight: bold;
+    width: 100%;
+    margin-right: 5px;
+  }
+
+  .header-cell-resize-handle {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
-
-    &.ember-table-table-header-tree-cell {
-      left: 20px;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    .ember-table-content {
-      padding: 5px;
-      line-height: 1.4;
-      position: absolute;
-      bottom: 2px;
-      font-weight: bold;
-      width: 100%;
-    }
+    width: 5px;
+    cursor: col-resize;
+    overflow: hidden;
   }
 
   .ember-table-toggle {

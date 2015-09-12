@@ -1,5 +1,7 @@
-<div class="ember-table-content-container" {{action "sortByColumn" content}}>
-  <span class="ember-table-content">
-    {{content.headerCellName}}
-  </span>
+<div class="ember-table-content" {{action "sortByColumn" column}}>
+  {{column.headerCellName}}
 </div>
+
+{{#if column.isResizable}}
+  {{header-cell-resize-handle onResize=(action "resize")}}
+{{/if}}

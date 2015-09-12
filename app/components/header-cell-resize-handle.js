@@ -1,0 +1,1 @@
+export { default } from 'ember-table/components/header-cell-resize-handle';

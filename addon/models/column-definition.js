@@ -42,7 +42,7 @@ export default Ember.Object.extend({
   // TODO(new-api): Remove `headerCellViewClass`
   // Override to specify a custom view to use for the header cell.
   headerCellView: 'header-cell',
-  headerCellViewClass: Ember.computed.alias('headerCellView'),
+  headerCellTemplateName: Ember.computed.alias('headerCellView'),
 
   // TODO(new-api): Remove `tableCellViewClass`
   // Override to specify a custom view to use for table cells.
